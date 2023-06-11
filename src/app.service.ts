@@ -4,10 +4,10 @@ import { AWSService } from './infra/aws/aws.service';
 @Injectable()
 export class AppService {
   constructor(
-    protected readonly aws: AWSService,
+    //protected readonly aws: AWSService,
   ) {}
 
   getHello(): any {
-    return this.aws.getPresignedUrl();
+    return 'hello';
   }
 }
