@@ -1,6 +1,12 @@
-import { Controller } from "@nestjs/common";
+import { Controller, Post } from "@nestjs/common";
+import { InventoryService } from "./inventory.service";
 
-@Controller()
+@Controller('inv')
 export class InventoryController {
+    constructor(private inventoryService: InventoryService) {}
 
+    @Post('add')
+    add(){
+        return 'Product added';
+    }
 }
